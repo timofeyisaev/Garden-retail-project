@@ -1,0 +1,65 @@
+.block{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 500px;
+    background-color: #A1E2EB;
+    color: white;
+}
+
+.leftBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.sale{
+    width: 175px;
+    height: 104px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 104px;
+    padding-left: 50px;
+}
+
+.newSeason{
+    width: 450px;
+    height: 82px;
+    padding-left: 50px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 63px;
+    line-height: 81.9px;
+}
+
+.salesBtn{
+    width: 155px;
+    height: 82px;
+    background-color: white;
+    color: #2D2D2D;
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 13px;
+    padding: 25px 50px 25px 50px;
+    margin-left: 50px;
+    margin-top: 30px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 32.5px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+.flowerBed{
+    background-image: url('../Images/flowerbed.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    
+}

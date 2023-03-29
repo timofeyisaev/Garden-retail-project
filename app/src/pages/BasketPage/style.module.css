@@ -1,0 +1,49 @@
+
+.container{
+    display: grid;
+    grid-template-columns: 800px auto;
+    max-width: 1000px;
+}
+
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px auto;
+    margin: 50px;
+    gap: 50px;
+    max-width: 824px;
+}
+
+.header h2{
+    font-family: 'Montserrat';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 3%;
+    
+}
+
+.header a{
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    padding-right: 30px;
+    font-family: 'Montserrat';
+    font-style: bold;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 3%;
+}
+
+.basket{
+    padding-top: 225px;
+    
+}
+

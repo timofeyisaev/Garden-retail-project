@@ -1,0 +1,10 @@
+.block{
+    background-image: url('../Images/notfound.png');
+    background-size: 116%;
+    background-position: 50% 32%;
+    background-repeat: no-repeat;
+    width: 1360px;
+    height: 560px;
+    vertical-align: middle;
+
+}

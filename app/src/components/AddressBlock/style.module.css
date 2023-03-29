@@ -1,0 +1,136 @@
+.addressContainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 50px;
+}
+
+.leftBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding-left: 30px;
+}
+
+.leftBlockContact{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: bold;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 3%;
+
+}
+
+.leftBlockPhone{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style:normal;
+    font-size: 55px;
+    line-height: 70px;
+    letter-spacing: 3%;
+}
+
+.iconsContainer{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    
+}
+
+.instagramBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 60px;
+}
+
+.whatsAppBlock{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+}
+
+.instagramIcon{
+     background-image: url('../Images/icons8-instagram-50.png');
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
+
+.whatsAppIcon{
+    background-image: url('../Images/icons8-whatsapp-50.png');
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.iconsContainer p{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style:normal;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 3%;
+}
+
+.rightBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding-left: 30px;
+}
+
+.rightBlockInscr{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: bold;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 3%;
+}
+
+.rightBlockAddress{
+    width: 500px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style:normal;
+    font-size: 30px;
+    line-height: 70px;
+    letter-spacing: 3%;
+}
+
+.workingHours{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-style:normal;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 3%;
+}
+
+.workingHours2{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style:normal;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 3%;
+}
+
+.map{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+    height: 500px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border: none;
+    
+}

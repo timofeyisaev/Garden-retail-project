@@ -1,0 +1,111 @@
+.genBlock{
+    padding: 50px;
+}
+
+
+.catalogueDiv{
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.inscription{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 3%;
+    align-items: left;
+    padding-left: 30px;
+    
+}
+
+.catalogueDiv a{
+    width: 120px;
+    height: 31px;
+    border: 2px solid #8B8B8B;
+    color: rgba(139, 139, 139, 1);
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.productsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-auto-rows: 250px;    
+    color: black;
+    padding: 20px;
+    margin: 20px;
+    gap: 20px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 3%;
+}
+
+.productsContainer a{
+    text-decoration: none;
+    color: black;
+}
+
+.productsDescr{    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.productsDescr p{
+    min-height: 50px;
+}
+
+.fertilizer{
+    background-image: url(../Images/fetilizer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 318px;
+    height: 350px;
+}
+
+.protective{
+    background-image: url('../Images/protective.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 318px;
+    height: 350px;
+    
+}
+
+.protInsc{
+    width: 318px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.planting{
+    background-image: url('../Images/planting.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 318px;
+    height: 350px;
+}
+
+.tools{
+    background-image: url('../Images/tools.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 318px;
+    height: 350px;
+}
