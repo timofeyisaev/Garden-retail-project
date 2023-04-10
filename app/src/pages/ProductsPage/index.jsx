@@ -13,23 +13,9 @@ export default function ProductsPage() {
 
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(productsReloadAction())        
-    }, [])
-
-    // const categories = useSelector (
-    //     ({categories}) => {
-    //         return categories.find ()
-    //         //По названию категории найти идентификатор
-    //         //Потом использовать его для фильтрации ниже 
-    //     }
-    // )
-
-    // const categories = useSelector(
-    //     ({categories}) =>{
-    //         if (category)
-    //     }
-    // )
+    // useEffect(() => {
+    //     dispatch(productsReloadAction())        
+    // }, [])
     
     const products = useSelector(
         ({products}) => {

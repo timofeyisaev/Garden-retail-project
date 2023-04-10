@@ -1,20 +1,36 @@
 .navBar{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-auto-rows: minmax(40px, auto);    
+    
+    display: flex;
+    justify-content: space-between;
     padding: 19px 10px 10px 28px;
     margin: 10px 10px 10px 10px;
-    width: 1300px;
+    
     height: 75px;   
     text-decoration: none;
     max-width: 1300px;
 }
+
+
+.nav_btn{
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    font-size: 30px;
+    justify-self: center;
+    cursor: pointer;
+}
+
+
 
 .leftBlock{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
+    padding-left: 50px;
 }
 
 .logo{
@@ -22,6 +38,8 @@
     width: 62px;
     height: 62px;
     background-size: cover;
+    padding: 30px;
+    
     
 }
 
@@ -32,7 +50,6 @@
     border-radius: 10px;
     width: 125px;
     height: 40px;
-    margin-right: 400px;
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 16px;
@@ -49,6 +66,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 50px;
+    gap: 50px;
 }
 
 .catalogue a{
@@ -79,4 +98,74 @@
     background-color: white;
     border: none;
     cursor: pointer;
+}
+
+.basketCount{
+    background-color: #339933;
+    color: white;
+    border: none;
+    width: 23px;
+    height: 23px;
+    border-radius: 20px;
+    text-align: center;
+    text-justify: center;
+    font-size: 17px;
+}
+
+
+
+@media(max-width: 835px){
+
+    .navBar{        
+        position: relative;
+        
+        }
+
+
+    .rightBlock{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        bottom: 0;        
+        background-color: #149214;
+        border: 2px solid white;
+        border-radius: 20px;
+        color: white;
+        height: auto;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity transform;
+        transition-duration: 0.5s;
+        padding: 10px;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .rightBlock a{
+        color: white;
+    }
+
+    .rightBlock_show{
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    
+    .rightBlock_show a{
+        pointer-events: auto;
+    }
+
+    .nav_btn{
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: #339933; 
+        color: white;
+        border: none;
+        border-radius: 20px;       
+    }
+
+    .shoppingBag{
+        background-color: transparent;
+    }
 }

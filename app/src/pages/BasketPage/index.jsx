@@ -19,6 +19,8 @@ export default function BasketPage() {
 
   const link = '/products/all';
 
+  
+
 
 
   return (
@@ -28,9 +30,14 @@ export default function BasketPage() {
           <h2>Shopping cart</h2>
           <Link to={link}>Back to the store </Link>
         </div>
+        
           {
-          data.map((item) => <BasketItem key={item.id} {...item} /> )
-          }  
+              data.length === 0
+            ? <h3>Your shopping cart is empty!</h3>
+            : data.map((item) => <BasketItem key={item.id} {...item} /> )
+          }
+       
+            
       </div>
       <div className={s.basket}>      
           <BasketCalculation />   

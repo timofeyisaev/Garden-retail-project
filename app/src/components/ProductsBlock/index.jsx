@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { priceFilterAction, productsSortAction } from '../../store/reducer/productsReducer';
+import { priceFilterAction, productsSortAction, discountLoadAction, productsReloadAction, productsLoadAction } from '../../store/reducer/productsReducer';
 import Product from '../Product';
 import s from './style.module.css';
 import { useParams } from 'react-router-dom';
@@ -17,6 +17,23 @@ export default function ProductsBlock() {
     dispatch(productsSortAction(value))
   }
   
+
+  const discountedItems = event => {
+    const check = document.getElementById('checkBox')
+    const change = dispatch(discountLoadAction())
+    const change2 = dispatch (productsReloadAction())
+    if (check.checked === true){
+      return change
+    } else return change2;
+  };
+
+  const onChange = event => {
+    const value = event.target.checked;
+    const value2 = event.target.uncheked;
+    console.log(value);
+    dispatch(discountLoadAction(value));
+    
+  };
 
   const { cattitle, catid} = useParams();
 
@@ -35,7 +52,6 @@ export default function ProductsBlock() {
     ...pre, 
     max: +event.target.value || Infinity}))
   };
-
   
 
   const setMinPrice = (event) => {
@@ -44,11 +60,11 @@ export default function ProductsBlock() {
 
   useEffect(() => {
     dispatch(priceFilterAction(price));
-  }, [price])
+  }, [price]);
 
 
   return (
-    <div >        
+    <div className={s.bigContainer}>        
             {categories()}
             <div>
                 <form className={s.form}>
@@ -56,7 +72,7 @@ export default function ProductsBlock() {
                     <input type="number" className={s.fromInput} placeholder='From' onChange={setMinPrice}/>
                     <input type="number" className={s.fromInput} placeholder='To' onChange={setMaxPrice}/>
                     <p>Discounted items</p>
-                    <input type="checkbox" className={s.checkBox} />
+                    <input type="checkbox" className={s.checkBox} onChange={onChange} id='checkBox' />
                     <p>Sorted by</p>
                     <select className={s.selector} placeholder='By default' onChange={sortBy}>
                         <option value="1">By default</option>

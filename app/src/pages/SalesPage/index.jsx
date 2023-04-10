@@ -14,12 +14,16 @@ export default function SalesPage() {
     }
     );
 
+    
+
   return (
     <div>
         <SalesBlock />
         <div className={s.container}>
           {
-              products.map(item => <Product key={item.id}{...item} />)
+              products
+              .filter(({show}) => Object.values(show).every(item => item))
+              .map(item => <Product key={item.id}{...item} />)
           }
         </div>
         

@@ -7,6 +7,20 @@
     color: white;
 }
 
+@media(max-width: 835px){
+    .block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 450px;
+    }
+
+    .flowerBed{
+        display: none;
+    }
+
+}
+
 .leftBlock{
     display: flex;
     flex-direction: column;

@@ -54,6 +54,7 @@
     font-size: 18px;
     line-height: 23px;
     letter-spacing: 3%;
+    
 }
 
 .phone button{
@@ -70,4 +71,5 @@
     line-height: 36px;
     letter-spacing: 3%;
     text-align: center;
+    cursor: pointer;
 }

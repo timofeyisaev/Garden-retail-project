@@ -35,10 +35,13 @@ export const productsReloadAction = (payload) => ({type: PRODUCTS_RELOAD, payloa
 export const productsReducer = (state = [], action) => {
     if (action.type === PRODUCTS_LOAD){
         console.log(action.payload);
-        return action.payload.map(item => ({...item, show: {search: true}}))
+        return action.payload.map(item => ({...item, show: { price: true, discount: true}}))
     } else if (action.type === PRODUCTS_DISCONT){
-         return state.find(({discont_price}) => discont_price === action.payload)
-    } else if (action.type === PRODUCTS_SORT){
+        return state.map(item => {
+            item.show.discount = item.discont_price !== null || !action.payload;
+            return item;
+        })
+   } else if (action.type === PRODUCTS_SORT){
         if (+action.payload === 2){
             state.sort((a, b) => a.price - b.price)
         }else if (+action.payload === 3) {
@@ -55,9 +58,6 @@ export const productsReducer = (state = [], action) => {
             state.sort((a, b) => b.price - a.price)
         }
         return [...state]
-
-    }else if (action.type === PRODUCTS_RELOAD){
-        return state.map(item => ({...item, show: {search: true, price: true} }))
     }else if (action.type === PRICE_FILTER){
         const {min, max} = action.payload;
         const newState = state.map (elem => {elem.show.price =
@@ -66,7 +66,7 @@ export const productsReducer = (state = [], action) => {
         })
         console.log(newState);
         return newState;
-    }else {
+    } else {
         return state
     }
 };

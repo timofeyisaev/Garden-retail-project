@@ -18,7 +18,7 @@ export default function SaleBlock() {
         <div className={s.container}>
           {
               products
-              .slice(0, 4)
+              .slice(0, 3)
               .map(item => <Product key={item.id}{...item} />)
           }
         </div>
