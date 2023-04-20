@@ -19,7 +19,7 @@ export default function ProductDescriptionPage() {
     
     
   return (
-    <div>
+    <div className={s.container}>
         {
           products.length === 0
           ? <p>Loading data...</p>
@@ -39,7 +39,7 @@ export default function ProductDescriptionPage() {
               
                 </div>
               )
-              : (<div className={s.card}>
+            : (<div className={s.card}>
                 <h2>{product.title}</h2>
                 <div className={s.block}>
                     <img src={picture} alt={product.title} />

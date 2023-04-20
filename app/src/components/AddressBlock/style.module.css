@@ -6,7 +6,7 @@
 
 
 
-@media(max-width: 835px){
+@media(max-width:1085px){
     .addressContainer{
         display: flex;
         flex-direction: column;

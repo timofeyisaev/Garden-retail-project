@@ -98,3 +98,38 @@
     letter-spacing: 3%;
     color: #FF32A1;
 }
+
+
+@media(max-width: 1085px){
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .block img{
+        width: 310px;
+        height: 310px;
+        padding: 30px;
+    }
+
+    .description{
+        align-items: center;
+    }
+    
+}

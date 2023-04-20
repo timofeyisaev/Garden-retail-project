@@ -42,15 +42,7 @@
     
 }
 
-@media (max-width: 500px){
-    .bigContainer{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
 
-}
 
 .fromInput{
     width: 103px;
@@ -73,4 +65,14 @@
     border: 1px solid black;
     border-radius: 7px;
     padding: 10px;
+}
+
+@media (max-width: 500px){
+    .bigContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
 }

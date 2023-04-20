@@ -3,6 +3,7 @@ import s from './style.module.css';
 import { useSelector } from 'react-redux';
 import { addOrder } from '../../store/asyncActions/order';
 import { useDispatch } from 'react-redux';
+import {basketClearAction} from '../../store/reducer/basketReducer';
 
 export default function BasketCalculation() {
 
@@ -51,7 +52,10 @@ const onSubmit = (event) => {
   event.preventDefault();
   const phoneNumber = +event.target.value;
   dispatch(addOrder(phoneNumber));
+  dispatch(basketClearAction());
   event.target.reset();
+  event.target.value = '';
+  
   }
 
 

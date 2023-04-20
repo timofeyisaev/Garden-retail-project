@@ -9,12 +9,14 @@ const BASKET_INCREMENT = 'BASKET_INCREMENT';
 const BASKET_DECREMENT = 'BASKET_DECREMENT';
 const BASKET_ADD = 'BASKET_ADD';
 const BASKET_DELETE_PRODUCT = 'BASKET_DELETE_PRODUCT';
+const BASKET_CLEAR = 'BASKET_CLEAR';
 
 
 export const basketIncrementAction = (payload) => ({type: BASKET_INCREMENT, payload});
 export const basketDecrementAction = (payload) => ({type: BASKET_DECREMENT, payload});
 export const basketAddAction = (payload) => ({type: BASKET_ADD, payload});
-export const basketDeleteProductAction = (payload) => ({type: BASKET_DELETE_PRODUCT, payload})
+export const basketDeleteProductAction = (payload) => ({type: BASKET_DELETE_PRODUCT, payload});
+export const basketClearAction = () => ({type: BASKET_CLEAR});
 
 export const basketLoadAction = (payload) => ({type: BASKET_LOAD, payload});
 
@@ -48,6 +50,8 @@ export const basketReducer = (state = [], action) =>{
     }
 } else if (action.type === BASKET_DELETE_PRODUCT){
     return state.filter (({id}) => id !== action.payload);
+} else if (action.type === BASKET_CLEAR){
+    return [];
 } else {
     return state
 }
